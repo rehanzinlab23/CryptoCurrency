@@ -20,9 +20,14 @@ async function fetchAllAPIs() {
 
     const data = await Promise.all(responses.map(res => res.json()));
 
- btc.innerHTML = `${data[0].price}`;
-    eth.innerHTML = `${data[1].price}`;
-    doge.innerHTML = `${data[2].price}`;
+    const btcPrice = parseFloat(data[0].price).toFixed(2);
+    const ethPrice = parseFloat(data[1].price).toFixed(2);
+    const dogePrice = parseFloat(data[2].price).toFixed(4);
+
+
+    btc.innerHTML = `${btcPrice}`;
+    eth.innerHTML = `${ethPrice}`;
+    doge.innerHTML = `${dogePrice}`;
 
   } catch (error) {
     console.error('Error fetching APIs:', error);
