@@ -23,6 +23,8 @@ nav {
 
      ul {
           flex: 1;
+          display: flex;
+          justify-content: center;
 
           li {
                display: inline-block;
@@ -55,6 +57,7 @@ nav {
      h1 {
           font-size: 88px;
           margin-bottom: 15px;
+          line-height: 1.1;
 
           span {
                color: #ff960b;
@@ -103,5 +106,86 @@ nav {
      h3 {
           color: #fff;
           margin-bottom: 5px;
+     }
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+     .content h1 {
+          font-size: 60px;
+     }
+
+     .content {
+          margin-top: 15%;
+     }
+
+     .coin-list {
+          right: 5%;
+          bottom: 30px;
+     }
+}
+
+@media (max-width: 768px) {
+     nav {
+          flex-direction: column;
+     }
+
+     nav ul {
+          justify-content: center;
+     }
+
+     .content {
+          margin-top: 20%;
+          text-align: center;
+     }
+
+     .content h1 {
+          font-size: 48px;
+     }
+
+     .content p {
+          font-size: 13px;
+     }
+
+     .coin-list {
+          position: relative;
+          right: 0;
+          bottom: 0;
+          margin-top: 40px;
+          flex-direction: column;
+     }
+
+     .coin {
+          width: 80%;
+          justify-content: center;
+     }
+}
+
+@media (max-width: 480px) {
+     .content h1 {
+          font-size: 36px;
+     }
+
+     .content p {
+          font-size: 12px;
+     }
+
+     nav ul li {
+          margin: 5px 10px;
+     }
+
+     nav .btn {
+          padding: 8px 20px;
+          font-size: 14px;
+     }
+
+     .coin {
+          padding: 10px 15px;
+          font-size: 12px;
+     }
+
+     .coin img {
+          width: 30px;
      }
 }
